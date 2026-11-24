@@ -445,3 +445,33 @@ a.service .more { margin-top: auto; padding-top: 6px; }
   .timeline li { border-top: 2px solid var(--line); }
 }
 @media (max-width: 520px) { .values, .team, .timeline { grid-template-columns: 1fr; } }
+
+/* Larger header bar */
+html { scroll-padding-top: 112px; }
+.site-header .header-row { min-height: 96px; gap: 28px; }
+.site-header .brand { gap: 14px; }
+.site-header .logo-mark { width: 50px; height: 50px; }
+.site-header .wordmark { font-size: 1.75rem; }
+.site-header .wordmark small { font-size: 0.8rem; margin-top: 5px; letter-spacing: 0.28em; }
+.site-header .nav { gap: 28px; }
+.site-header .nav a { font-size: 1.05rem; }
+.site-header .header-phone { font-size: 1rem; }
+.site-header .header-cta .btn { min-height: 50px; padding: 0 22px; font-size: 1rem; }
+@media (max-width: 1100px) { .site-header .nav { gap: 18px; } .site-header .nav a { font-size: .98rem; } }
+@media (max-width: 560px) {
+  html { scroll-padding-top: 90px; }
+  .site-header .header-row { min-height: 76px; gap: 12px; }
+  .site-header .logo-mark { width: 40px; height: 40px; }
+  .site-header .wordmark { font-size: 1.35rem; }
+  .site-header .wordmark small { font-size: 0.68rem; }
+  .site-header .header-cta .btn { min-height: 44px; padding: 0 14px; font-size: .9rem; }
+}
+@media (max-width: 380px) { .site-header .wordmark { font-size: 1.15rem; } .site-header .logo-mark { width: 34px; height: 34px; } }
+.site-header .nav a, .site-header .header-cta .btn, .site-header .header-phone { white-space: nowrap; }
+.site-header .nav { gap: 22px; }
+.site-header .nav a { font-size: 1rem; }
+@media (max-width: 1360px) { .site-header .header-phone { display: none; } }
+@media (max-width: 1100px) { .site-header .nav { gap: 16px; } .site-header .nav a { font-size: .95rem; } }
+@media (max-width: 560px) { .site-header .header-cta { display: none; } }
+@media (max-width: 560px) { .site-header .wordmark { font-size: 1.55rem; } .site-header .logo-mark { width: 46px; height: 46px; } }
+@media (max-width: 360px) { .site-header .wordmark { font-size: 1.3rem; } .site-header .logo-mark { width: 38px; height: 38px; } }
