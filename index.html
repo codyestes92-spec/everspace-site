@@ -62,7 +62,7 @@
 </header>
 
 <main id="top">
-  <section class="hero">
+  <section class="hero band">
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Orlando trade show booth company</p>
@@ -79,28 +79,60 @@
           <li>Fully insured setup crews</li>
         </ul>
       </div>
-      <figure class="hero-figure">
-        <!-- Replace this drawing with a real photo of an Everspace booth at a show when one is available. -->
-        <svg class="elev" viewBox="0 0 520 300" role="img" aria-label="Front elevation drawing of a 10 by 20 foot trade show booth with a branded back wall, a video screen and a counter">
-          <line class="stroke" x1="20" y1="250" x2="500" y2="250" stroke-width="2"/>
-          <rect class="wall" x="60" y="90" width="400" height="160" stroke-width="2"/>
-          <rect class="panel" x="230" y="104" width="216" height="80" rx="2"/>
-          <text class="wall-text" x="338" y="151" text-anchor="middle">YOUR BRAND</text>
-          <rect class="screen" x="84" y="112" width="112" height="66" rx="3"/>
-          <line class="stroke" x1="140" y1="178" x2="140" y2="250" stroke-width="2"/>
-          <rect class="wall" x="300" y="200" width="110" height="50" stroke-width="2"/>
-          <rect class="panel" x="300" y="200" width="110" height="10"/>
-          <path class="stroke" d="M60 90 L40 74 M460 90 L480 74" stroke-width="1.2" stroke-dasharray="3 3"/>
-          <g class="dim" stroke-width="1">
-            <line x1="60" y1="272" x2="460" y2="272"/><line x1="60" y1="264" x2="60" y2="280"/><line x1="460" y1="264" x2="460" y2="280"/>
-            <line x1="30" y1="90" x2="30" y2="250"/><line x1="22" y1="90" x2="38" y2="90"/><line x1="22" y1="250" x2="38" y2="250"/>
+      <figure class="stage">
+        <!-- REAL FOOTAGE: when Everspace has a build timelapse, put it at media/hero.mp4 (and a still at media/hero.jpg),
+             then delete the <svg class="build"> below and uncomment this video:
+        <video class="stage-video" autoplay muted loop playsinline preload="metadata" poster="media/hero.jpg">
+          <source src="media/hero.mp4" type="video/mp4">
+        </video>
+        -->
+        <svg class="build" viewBox="0 0 560 330" role="img" aria-label="Animation of a 10 by 20 foot trade show booth being built: the frame goes up, the fabric wall and brand graphic go on, the screen, counter, hanging sign and lights are added, and visitors arrive">
+          <defs>
+            <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd59a" stop-opacity=".9"/><stop offset="1" stop-color="#ffe9c7" stop-opacity="0"/></linearGradient>
+          </defs>
+          <g class="hall">
+            <path d="M0 40h560M0 70h560" />
+            <path d="M40 0v40M120 0v40M200 0v40M280 0v40M360 0v40M440 0v40M520 0v40"/>
           </g>
-          <text x="260" y="292" text-anchor="middle">20′-0″</text>
-          <text x="14" y="174" text-anchor="middle" transform="rotate(-90 14 174)">8′-0″</text>
-          <text x="356" y="196" text-anchor="middle">counter</text>
-          <text x="140" y="104" text-anchor="middle">screen</text>
+          <rect class="carpet" x="0" y="280" width="560" height="50"/>
+          <g class="b-dim">
+            <path d="M80 304h404M80 298v12M484 298v12"/>
+            <text x="282" y="322" text-anchor="middle">20′-0″</text>
+          </g>
+          <rect class="b-up b-frame" x="80" y="100" width="8" height="180"/>
+          <rect class="b-up b-frame" x="476" y="100" width="8" height="180"/>
+          <rect class="b-beam b-frame" x="80" y="100" width="404" height="8"/>
+          <rect class="b-fabric" x="88" y="108" width="388" height="172"/>
+          <g class="b-graphic"><rect x="252" y="124" width="208" height="84" rx="2"/></g>
+          <text class="b-brand" x="356" y="173" text-anchor="middle">YOUR BRAND</text>
+          <g class="b-screen">
+            <rect x="110" y="128" width="120" height="70" rx="3" class="scr"/>
+            <polygon points="162,150 162,176 184,163" class="play"/>
+            <rect x="166" y="198" width="8" height="82" class="b-frame"/>
+          </g>
+          <g class="b-counter">
+            <rect x="320" y="226" width="124" height="54" class="ctr"/>
+            <rect x="320" y="226" width="124" height="9" class="ctr-top"/>
+          </g>
+          <g class="b-sign">
+            <path d="M232 0v52M332 0v52" class="wire"/>
+            <rect x="212" y="52" width="140" height="30" rx="2" class="sign"/>
+            <text x="282" y="72" text-anchor="middle">BOOTH 1042</text>
+          </g>
+          <g class="b-lamps"><rect x="144" y="100" width="12" height="10" rx="2"/><rect x="394" y="100" width="12" height="10" rx="2"/></g>
+          <g class="b-light">
+            <polygon points="150,108 108,280 214,280" fill="url(#beam)"/>
+            <polygon points="400,108 344,280 456,280" fill="url(#beam)"/>
+          </g>
+          <g class="b-people">
+            <g><circle cx="270" cy="226" r="9"/><rect x="259" y="237" width="22" height="43" rx="8"/></g>
+            <g><circle cx="300" cy="230" r="8"/><rect x="290" y="240" width="20" height="40" rx="8"/></g>
+            <g><circle cx="470" cy="222" r="9"/><rect x="459" y="233" width="22" height="47" rx="8"/></g>
+          </g>
         </svg>
-        <figcaption><span>Front elevation, 10′ × 20′ inline</span><span>Scale 1″ = 2′</span></figcaption>
+        <ol class="ticker" aria-hidden="true">
+          <li>Design</li><li>Build</li><li>Print</li><li>Install</li><li>Show day</li>
+        </ol>
       </figure>
     </div>
   </section>

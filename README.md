@@ -12,7 +12,7 @@ Everything that was a guess or needs real info is marked with `class="ph"` (dash
 5. **Our work**: replace the six photo placeholders with real booth photos (compressed, WebP or JPG under ~300 KB) and real captions.
 6. **Testimonials**: only real quotes from real clients, with permission.
 7. **About**: owner or team photo, the "what makes us different" sentences, years in business, booths built.
-8. **Hero image**: the line drawing of a booth is a stand-in; swap it for a real photo of an Everspace booth when there's a good one.
+8. **Hero video**: the hero shows a looping animation of a booth being built. To use real footage instead, add `media/hero.mp4` (a 10 to 20 second build timelapse, muted, 1280px wide, under about 5 MB) and `media/hero.jpg`, then follow the comment inside `<figure class="stage">` in index.html.
 9. **SEO**: in `<head>`, add `telephone` and street address to the JSON-LD block (match the Google Business Profile exactly) and replace `og:image` with a 1200×630 booth photo.
 
 ## What changed vs. the current site
