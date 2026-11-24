@@ -318,3 +318,10 @@ fieldset.field { border: 0; padding: 0; margin: 0; }
   .build *, .ticker li, .ticker li::after { animation: none !important; opacity: 1 !important; transform: none !important; }
   .ticker li::after { transform: scaleX(0) !important; }
 }
+
+/* Footer logo: light version on the dark band */
+.footer-brand { display: grid; gap: 12px; }
+.site-footer .logo-mark { fill: var(--band-ink); }
+.site-footer .logo-accent { fill: var(--accent); }
+.site-footer .wordmark { color: var(--band-ink); }
+.site-footer .wordmark small { color: var(--band-muted); }
