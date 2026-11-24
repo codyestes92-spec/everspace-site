@@ -270,52 +270,62 @@ fieldset.field { border: 0; padding: 0; margin: 0; }
 .build .b-lamps rect { fill: var(--stage-metal); }
 .build .b-people { fill: var(--stage-people); }
 .build [class^="b-"] { transform-box: fill-box; }
-.b-up { transform-origin: bottom; animation: b-up 14s infinite; }
-.b-beam { transform-origin: left; animation: b-beam 14s infinite; }
-.b-fabric { transform-origin: top; animation: b-fabric 14s infinite cubic-bezier(.3,.7,.3,1); }
-.b-graphic { transform-origin: left; animation: b-graphic 14s infinite; }
-.b-brand { animation: b-brand 14s infinite; }
-.b-screen { animation: b-screen 14s infinite cubic-bezier(.3,1.4,.5,1); }
-.b-counter { animation: b-counter 14s infinite cubic-bezier(.2,.8,.3,1); }
-.b-sign { animation: b-sign 14s infinite cubic-bezier(.3,1.3,.5,1); }
-.b-lamps { animation: b-lamps 14s infinite; }
-.b-light { animation: b-light 14s infinite; }
-.b-people { animation: b-people 14s infinite ease-out; }
-.b-dim { animation: b-dim 14s infinite; }
+.b-up { transform-origin: bottom; animation: b-up 18s infinite; }
+.b-beam { transform-origin: left; animation: b-beam 18s infinite; }
+.b-fabric { transform-origin: top; animation: b-fabric 18s infinite cubic-bezier(.3,.7,.3,1); }
+.b-graphic { transform-origin: left; animation: b-graphic 18s infinite; }
+.b-brand { animation: b-brand 18s infinite; }
+.b-screen { animation: b-screen 18s infinite cubic-bezier(.3,1.4,.5,1); }
+.b-counter { animation: b-counter 18s infinite cubic-bezier(.2,.8,.3,1); }
+.b-sign { animation: b-sign 18s infinite cubic-bezier(.3,1.3,.5,1); }
+.b-lamps { animation: b-lamps 18s infinite; }
+.b-light { animation: b-light 18s infinite; }
+.b-people { animation: b-people 18s infinite ease-out; }
+.b-dim { animation: b-dim 18s infinite; }
 .ticker { list-style: none; margin: 0; padding: 12px 14px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; border-top: 1px solid var(--stage-line); }
 .ticker li { position: relative; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--band-muted); padding-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .ticker li::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; }
-.ticker li:nth-child(1) { animation: t1 14s infinite; } .ticker li:nth-child(1)::after { animation: u1 14s infinite linear; }
-.ticker li:nth-child(2) { animation: t2 14s infinite; } .ticker li:nth-child(2)::after { animation: u2 14s infinite linear; }
-.ticker li:nth-child(3) { animation: t3 14s infinite; } .ticker li:nth-child(3)::after { animation: u3 14s infinite linear; }
-.ticker li:nth-child(4) { animation: t4 14s infinite; } .ticker li:nth-child(4)::after { animation: u4 14s infinite linear; }
-.ticker li:nth-child(5) { animation: t5 14s infinite; } .ticker li:nth-child(5)::after { animation: u5 14s infinite linear; }
-@keyframes b-up { 0%, 3% { opacity: 0; transform: scaleY(0); } 11%, 91% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
-@keyframes b-beam { 0%, 10% { opacity: 0; transform: scaleX(0); } 16%, 91% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
-@keyframes b-fabric { 0%, 16% { opacity: 0; transform: scaleY(0); } 26%, 91% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
-@keyframes b-graphic { 0%, 28% { opacity: 0; transform: scaleX(0); } 35%, 91% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
-@keyframes b-brand { 0%, 34% { opacity: 0; transform: translateY(6px); } 38%, 91% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
-@keyframes b-screen { 0%, 39% { opacity: 0; transform: translateY(-60px); } 46%, 91% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
-@keyframes b-counter { 0%, 45% { opacity: 0; transform: translateX(160px); } 52%, 91% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
-@keyframes b-sign { 0%, 53% { opacity: 0; transform: translateY(-90px); } 60%, 91% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
-@keyframes b-lamps { 0%, 60% { opacity: 0; transform: none; } 61%, 91% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
-@keyframes b-people { 0%, 67% { opacity: 0; transform: translateX(-40px); } 77%, 91% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
-@keyframes b-light { 0%, 61% { opacity: 0; } 62% { opacity: 1; } 63% { opacity: .4; } 65%, 91% { opacity: 1; } 97%, 100% { opacity: 0; } }
-@keyframes b-dim { 0% { opacity: 0; } 3%, 91% { opacity: 1; } 97%, 100% { opacity: 0; } }
-@keyframes t1 { 0%, 14.5% { color: var(--band-ink); } 15%, 100% { color: var(--band-muted); } }
-@keyframes u1 { 0%, 0% { transform: scaleX(0); } 15% { transform: scaleX(1); } 15.01%, 100% { transform: scaleX(0); } }
-@keyframes t2 { 0%, 14.9%, 28%, 100% { color: var(--band-muted); } 15%, 27.5% { color: var(--band-ink); } }
-@keyframes u2 { 0%, 15% { transform: scaleX(0); } 28% { transform: scaleX(1); } 28.01%, 100% { transform: scaleX(0); } }
-@keyframes t3 { 0%, 27.9%, 38%, 100% { color: var(--band-muted); } 28%, 37.5% { color: var(--band-ink); } }
-@keyframes u3 { 0%, 28% { transform: scaleX(0); } 38% { transform: scaleX(1); } 38.01%, 100% { transform: scaleX(0); } }
-@keyframes t4 { 0%, 37.9%, 66%, 100% { color: var(--band-muted); } 38%, 65.5% { color: var(--band-ink); } }
-@keyframes u4 { 0%, 38% { transform: scaleX(0); } 66% { transform: scaleX(1); } 66.01%, 100% { transform: scaleX(0); } }
-@keyframes t5 { 0%, 65.9%, 92%, 100% { color: var(--band-muted); } 66%, 91.5% { color: var(--band-ink); } }
-@keyframes u5 { 0%, 66% { transform: scaleX(0); } 92% { transform: scaleX(1); } 92.01%, 100% { transform: scaleX(0); } }
+.ticker li:nth-child(1) { animation: t1 18s infinite; } .ticker li:nth-child(1)::after { animation: u1 18s infinite linear; }
+.ticker li:nth-child(2) { animation: t2 18s infinite; } .ticker li:nth-child(2)::after { animation: u2 18s infinite linear; }
+.ticker li:nth-child(3) { animation: t3 18s infinite; } .ticker li:nth-child(3)::after { animation: u3 18s infinite linear; }
+.ticker li:nth-child(4) { animation: t4 18s infinite; } .ticker li:nth-child(4)::after { animation: u4 18s infinite linear; }
+.ticker li:nth-child(5) { animation: t5 18s infinite; } .ticker li:nth-child(5)::after { animation: u5 18s infinite linear; }
 
+@keyframes b-up { 0%, 2.33% { opacity: 0; transform: scaleY(0); } 8.56%, 70.78% { opacity: 1; transform: none; } 75.44%, 100% { opacity: 0; transform: none; } }
+@keyframes b-beam { 0%, 7.78% { opacity: 0; transform: scaleX(0); } 12.44%, 70.78% { opacity: 1; transform: none; } 75.44%, 100% { opacity: 0; transform: none; } }
+@keyframes b-fabric { 0%, 12.44% { opacity: 0; transform: scaleY(0); } 20.22%, 70.78% { opacity: 1; transform: none; } 75.44%, 100% { opacity: 0; transform: none; } }
+@keyframes b-graphic { 0%, 21.78% { opacity: 0; transform: scaleX(0); } 27.22%, 70.78% { opacity: 1; transform: none; } 75.44%, 100% { opacity: 0; transform: none; } }
+@keyframes b-brand { 0%, 26.44% { opacity: 0; transform: translateY(6px); } 29.56%, 70.78% { opacity: 1; transform: none; } 75.44%, 100% { opacity: 0; transform: none; } }
+@keyframes b-screen { 0%, 30.33% { opacity: 0; transform: translateY(-60px); } 35.78%, 70.78% { opacity: 1; transform: none; } 75.44%, 100% { opacity: 0; transform: none; } }
+@keyframes b-counter { 0%, 35.0% { opacity: 0; transform: translateX(160px); } 40.44%, 70.78% { opacity: 1; transform: none; } 75.44%, 100% { opacity: 0; transform: none; } }
+@keyframes b-sign { 0%, 41.22% { opacity: 0; transform: translateY(-90px); } 46.67%, 70.78% { opacity: 1; transform: none; } 75.44%, 100% { opacity: 0; transform: none; } }
+@keyframes b-lamps { 0%, 46.67% { opacity: 0; transform: none; } 47.44%, 70.78% { opacity: 1; transform: none; } 75.44%, 100% { opacity: 0; transform: none; } }
+@keyframes b-people { 0%, 52.11% { opacity: 0; transform: translateX(-40px); } 59.89%, 70.78% { opacity: 1; transform: none; } 75.44%, 100% { opacity: 0; transform: none; } }
+@keyframes b-light { 0%, 47.44% { opacity: 0; } 48.22% { opacity: 1; } 49.0% { opacity: .4; } 50.56%, 70.78% { opacity: 1; } 75.44%, 100% { opacity: 0; } }
+@keyframes b-dim { 0% { opacity: 0; } 3%, 70.78% { opacity: 1; } 75.44%, 100% { opacity: 0; } }
+@keyframes b-logo { 0%, 76% { opacity: 0; transform: scale(.94); } 81%, 95% { opacity: 1; transform: none; } 99.5%, 100% { opacity: 0; transform: none; } }
+@keyframes b-ticker { 0%, 72% { opacity: 1; } 75%, 97% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes t1 { 0%, 11.27% { color: var(--band-ink); } 11.67%, 100% { color: var(--band-muted); } }
+@keyframes u1 { 0%, 0.0% { transform: scaleX(0); } 11.67% { transform: scaleX(1); } 11.68%, 100% { transform: scaleX(0); } }
+@keyframes t2 { 0%, 11.57%, 21.78%, 100% { color: var(--band-muted); } 11.67%, 21.38% { color: var(--band-ink); } }
+@keyframes u2 { 0%, 11.67% { transform: scaleX(0); } 21.78% { transform: scaleX(1); } 21.79%, 100% { transform: scaleX(0); } }
+@keyframes t3 { 0%, 21.68%, 29.56%, 100% { color: var(--band-muted); } 21.78%, 29.16% { color: var(--band-ink); } }
+@keyframes u3 { 0%, 21.78% { transform: scaleX(0); } 29.56% { transform: scaleX(1); } 29.57%, 100% { transform: scaleX(0); } }
+@keyframes t4 { 0%, 29.46%, 51.33%, 100% { color: var(--band-muted); } 29.56%, 50.93% { color: var(--band-ink); } }
+@keyframes u4 { 0%, 29.56% { transform: scaleX(0); } 51.33% { transform: scaleX(1); } 51.34%, 100% { transform: scaleX(0); } }
+@keyframes t5 { 0%, 51.23%, 71.56%, 100% { color: var(--band-muted); } 51.33%, 71.16% { color: var(--band-ink); } }
+@keyframes u5 { 0%, 51.33% { transform: scaleX(0); } 71.56% { transform: scaleX(1); } 71.57%, 100% { transform: scaleX(0); } }
+.b-logo { transform-origin: center; animation: b-logo 18s infinite ease-out; }
+.ticker { animation: b-ticker 18s infinite; }
+.build .b-logo .bg { fill: var(--stage-bg); }
+.build .b-logo .mk { fill: #eaf0f3; }
+.build .b-logo .acc { fill: var(--accent); }
+.build .b-logo .name { font-family: var(--font-display); font-weight: 800; font-size: 40px; letter-spacing: .06em; fill: #eaf0f3; }
+.build .b-logo .sub { font-family: var(--font-mono); font-size: 13px; letter-spacing: .5em; fill: var(--stage-muted); }
 @media (max-width: 480px) { .ticker li { font-size: .62rem; letter-spacing: .02em; } }
 @media (prefers-reduced-motion: reduce) {
-  .build *, .ticker li, .ticker li::after { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .build *, .ticker, .ticker li, .ticker li::after { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .build .b-logo { display: none; }
   .ticker li::after { transform: scaleX(0) !important; }
 }
 
