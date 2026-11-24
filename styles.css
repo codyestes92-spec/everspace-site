@@ -420,3 +420,28 @@ a.service .more { margin-top: auto; padding-top: 6px; }
   .chat-panel { height: min(540px, calc(100dvh - 110px)); }
 }
 @media (prefers-reduced-motion: reduce) { .typing span { animation: none; opacity: .6; } }
+
+/* Our story page */
+.story-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+.story-grid > * { min-width: 0; }
+.story-photo { aspect-ratio: 4 / 5; max-width: 100%; border-radius: var(--radius); font-family: var(--font-mono); font-size: .8rem; }
+.story-copy { display: grid; gap: 16px; max-width: 65ch; }
+.values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.value { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 8px; align-content: start; }
+.value p { color: var(--muted); }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--line); }
+.timeline li { position: relative; padding: 22px 18px 0 0; display: grid; gap: 6px; align-content: start; }
+.timeline li::before { content: ""; position: absolute; top: -7px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+.timeline b { font-family: var(--font-mono); font-size: 1.05rem; }
+.team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.team figure { margin: 0; display: grid; gap: 10px; }
+.team .shot { aspect-ratio: 1; max-width: 100%; border-radius: var(--radius); font-family: var(--font-mono); font-size: .8rem; }
+.team figcaption { display: grid; gap: 4px; font-size: .92rem; color: var(--muted); }
+.team figcaption b { color: var(--ink); font-size: 1rem; }
+.story-link { margin-top: 6px; }
+@media (max-width: 860px) {
+  .story-grid { grid-template-columns: 1fr; } .story-photo { max-width: 380px; aspect-ratio: 4 / 3; }
+  .values, .team { grid-template-columns: 1fr 1fr; } .timeline { grid-template-columns: 1fr 1fr; row-gap: 24px; border-top: 0; }
+  .timeline li { border-top: 2px solid var(--line); }
+}
+@media (max-width: 520px) { .values, .team, .timeline { grid-template-columns: 1fr; } }
