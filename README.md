@@ -30,3 +30,6 @@ Everything that was a guess or needs real info is marked with `class="ph"` (dash
 - `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` for browser tabs and phone home screens.
 - `og-image.png` (1200×630) is the preview shown when the link is shared.
 - Colors: navy #0f2533, orange #e8611a. Fonts: Archivo ExtraBold (name), JetBrains Mono (EXHIBITS).
+
+## Service pages
+Each service on the homepage links to its own page (for example `custom-booth-design.html`). The wording on those pages describes typical capabilities, so strike anything Everspace doesn't offer. Each page has three "Recent work" photo slots for real project photos. `sitemap.xml` lists every page for Google Search Console.
