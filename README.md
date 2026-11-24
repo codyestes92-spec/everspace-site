@@ -33,3 +33,9 @@ Everything that was a guess or needs real info is marked with `class="ph"` (dash
 
 ## Service pages
 Each service on the homepage links to its own page (for example `custom-booth-design.html`). The wording on those pages describes typical capabilities, so strike anything Everspace doesn't offer. Each page has three "Recent work" photo slots for real project photos. `sitemap.xml` lists every page for Google Search Console.
+
+## Chat assistant
+A "Chat with us" button sits in the bottom right corner of every page.
+- **Turn on the AI:** in Vercel, open the project, then Settings > Environment Variables, and add `ANTHROPIC_API_KEY` (create a key at console.anthropic.com). Redeploy. Until the key is set, the chat runs in demo mode with a few sample answers. The assistant's instructions live in `api/chat.js`; it never quotes prices or dates and points people to the quote form.
+- **Hand-off to a person:** add `HANDOFF_WEBHOOK_URL` (a Slack incoming webhook, Zapier, Make, or similar). "Talk to a person" then sends the visitor's name, email and chat transcript there. Until it's set, the chat offers the email address and pre-fills the quote form with the conversation.
+- Usage is billed per message by Anthropic. Set a monthly spend limit in the Anthropic console.

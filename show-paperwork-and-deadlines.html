@@ -113,6 +113,41 @@
   <a class="btn btn-primary" href="index.html#quote">Get a free quote</a>
 </div>
 
+<div class="chat" id="chat">
+  <button type="button" class="chat-launch" id="chat-launch" aria-expanded="false" aria-controls="chat-panel">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>
+    <span>Chat with us</span>
+  </button>
+  <div class="chat-panel" id="chat-panel" role="dialog" aria-label="Chat with Everspace" hidden>
+    <header class="chat-head">
+      <div><b>Everspace assistant</b><span class="chat-badge">AI</span><small>Ask about booths, rentals and setup</small></div>
+      <button type="button" class="chat-x" id="chat-close" aria-label="Close chat">×</button>
+    </header>
+    <div class="chat-log" id="chat-log" aria-live="polite"></div>
+    <div class="chat-chips" id="chat-chips">
+      <button type="button">What booth sizes do you build?</button>
+      <button type="button">Can I rent a booth?</button>
+      <button type="button">Do you install outside Florida?</button>
+    </div>
+    <form class="chat-handoff" id="chat-handoff" hidden>
+      <p>Leave your details and a team member will follow up.</p>
+      <label for="h-name">Name</label><input id="h-name" autocomplete="name" required>
+      <label for="h-email">Email</label><input id="h-email" type="email" autocomplete="email" required>
+      <label for="h-phone">Phone <span>(optional)</span></label><input id="h-phone" type="tel" autocomplete="tel">
+      <div class="chat-row"><button type="submit" class="btn btn-primary">Send to the team</button><button type="button" class="chat-link" id="h-cancel">Cancel</button></div>
+    </form>
+    <form class="chat-input" id="chat-form">
+      <label for="chat-text" class="sr-only">Your message</label>
+      <input id="chat-text" autocomplete="off" maxlength="1500" placeholder="Type your question">
+      <button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-2-6z"/></svg></button>
+    </form>
+    <footer class="chat-foot">
+      <button type="button" class="chat-link" id="chat-human">Talk to a person</button>
+      <span>AI answers can be wrong. A person confirms every quote.</span>
+    </footer>
+  </div>
+</div>
+
 <script src="script.js"></script>
 
 </body>
