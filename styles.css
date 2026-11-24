@@ -97,6 +97,8 @@ body::before {
 .header-row { display: flex; align-items: center; gap: 20px; min-height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
 .brand img { height: 40px; width: auto; }
+.logo-mark { width: 34px; height: 34px; fill: var(--ink); flex-shrink: 0; }
+.logo-accent { fill: var(--accent); }
 .wordmark { font-family: var(--font-display); font-weight: 800; font-stretch: 115%; font-size: 1.2rem; letter-spacing: 0.02em; line-height: 1; }
 .wordmark small { display: block; font-family: var(--font-mono); font-weight: 500; font-size: 0.62rem; letter-spacing: 0.2em; color: var(--muted); margin-top: 3px; }
 .nav { display: flex; gap: 22px; margin-left: auto; }
