@@ -512,3 +512,21 @@ html { scroll-padding-top: 100px; }
   .site-header .wordmark small { font-size: .74rem; }
 }
 @media (prefers-reduced-motion: reduce) { .site-header * { transition: none !important; } }
+
+/* Desktop: logo stays big (no shrink), and grows on wide screens */
+@media (min-width: 981px) {
+  .site-header .header-row,
+  .site-header.is-scrolled .header-row { min-height: clamp(128px, 8.5vw, 168px); }
+  .site-header .logo-mark,
+  .site-header.is-scrolled .logo-mark { width: clamp(76px, 5.4vw, 104px); height: clamp(76px, 5.4vw, 104px); }
+  .site-header .wordmark,
+  .site-header.is-scrolled .wordmark { font-size: clamp(2.7rem, 2.6vw, 3.7rem); }
+  .site-header .wordmark small,
+  .site-header.is-scrolled .wordmark small { font-size: clamp(1.05rem, 1vw, 1.4rem); margin-top: 8px; }
+  html { scroll-padding-top: 180px; }
+}
+@media (min-width: 981px) and (max-width: 1180px) {
+  .site-header .logo-mark, .site-header.is-scrolled .logo-mark { width: 66px; height: 66px; }
+  .site-header .wordmark, .site-header.is-scrolled .wordmark { font-size: 2.3rem; }
+  .site-header .wordmark small, .site-header.is-scrolled .wordmark small { font-size: .92rem; }
+}
