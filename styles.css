@@ -475,3 +475,40 @@ html { scroll-padding-top: 112px; }
 @media (max-width: 560px) { .site-header .header-cta { display: none; } }
 @media (max-width: 560px) { .site-header .wordmark { font-size: 1.55rem; } .site-header .logo-mark { width: 46px; height: 46px; } }
 @media (max-width: 360px) { .site-header .wordmark { font-size: 1.3rem; } .site-header .logo-mark { width: 38px; height: 38px; } }
+
+/* Logo front and center: tall header that tightens on scroll */
+.site-header .header-row { min-height: 128px; transition: min-height .25s ease; }
+.site-header .logo-mark { width: 76px; height: 76px; transition: width .25s ease, height .25s ease; }
+.site-header .wordmark { font-size: 2.7rem; letter-spacing: 0.03em; transition: font-size .25s ease; }
+.site-header .wordmark small { font-size: 1.05rem; letter-spacing: 0.42em; margin-top: 8px; }
+.site-header .brand { gap: 18px; }
+html { scroll-padding-top: 100px; }
+.site-header.is-scrolled .header-row { min-height: 84px; }
+.site-header.is-scrolled .logo-mark { width: 50px; height: 50px; }
+.site-header.is-scrolled .wordmark { font-size: 1.8rem; }
+.site-header.is-scrolled .wordmark small { font-size: .78rem; margin-top: 5px; }
+@media (max-width: 1180px) {
+  .site-header .logo-mark { width: 62px; height: 62px; }
+  .site-header .wordmark { font-size: 2.2rem; }
+  .site-header .wordmark small { font-size: .9rem; }
+}
+@media (max-width: 980px) {
+  .site-header .header-row { min-height: 112px; }
+}
+@media (max-width: 560px) {
+  .site-header .header-row { min-height: 104px; justify-content: center; }
+  .site-header .brand { margin: 0 auto; gap: 14px; }
+  .site-header .logo-mark { width: 60px; height: 60px; }
+  .site-header .wordmark { font-size: 2.05rem; }
+  .site-header .wordmark small { font-size: .86rem; letter-spacing: .38em; margin-top: 6px; }
+  .site-header.is-scrolled .header-row { min-height: 70px; }
+  .site-header.is-scrolled .logo-mark { width: 40px; height: 40px; }
+  .site-header.is-scrolled .wordmark { font-size: 1.4rem; }
+  .site-header.is-scrolled .wordmark small { font-size: .66rem; }
+}
+@media (max-width: 370px) {
+  .site-header .logo-mark { width: 50px; height: 50px; }
+  .site-header .wordmark { font-size: 1.7rem; }
+  .site-header .wordmark small { font-size: .74rem; }
+}
+@media (prefers-reduced-motion: reduce) { .site-header * { transition: none !important; } }

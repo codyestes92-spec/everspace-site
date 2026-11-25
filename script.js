@@ -155,3 +155,12 @@
       .catch(fallbackToForm);
   });
 })();
+
+// Header tightens once the visitor scrolls
+(function () {
+  var h = document.querySelector('.site-header');
+  if (!h) return;
+  var on = false;
+  function check() { var s = window.scrollY > 40; if (s !== on) { on = s; h.classList.toggle('is-scrolled', s); } }
+  window.addEventListener('scroll', check, { passive: true }); check();
+})();
